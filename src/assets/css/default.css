@@ -1,0 +1,123 @@
+body{
+    background-color:#f8fbfc;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 260px auto;
+}
+.full-container {
+    display: grid;
+    grid-template-columns: 0px auto;
+}
+aside {
+    background-color: #ffffff;
+    min-height: calc(100vh - 64px);
+    border-right: 1px solid #ececec;
+}
+section > div {
+    padding: 0 24px;
+}
+.accordion__label {
+    color: #fff;
+}
+.accordion__arrow {
+    border-bottom: 6px solid #fff!important;
+}
+.fadeOut{
+    opacity:0;
+    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+
+}
+.fadeIn{
+    opacity:1;
+    transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
+.navheader {
+    margin-left: -24px;
+    margin-right: -12px;
+    margin-top: -11px;
+    background-color: #ffffff;
+}
+.logos{
+    display: block;
+    padding: 6px;
+    text-align: center;
+}
+
+/*
+** Master UI Component
+*/ 
+.search__list{
+    position: relative;
+}
+
+.heightbar{
+    height: 58px;
+}
+
+.border-toogle {
+    border-right: 1px solid #dcdee3;
+}
+
+.disnone {
+    display: none
+}
+a {
+    text-decoration: none!important;
+}
+ul {
+    padding-left: 0!important;
+}
+ul > li {
+    padding-bottom: 12px;
+}
+.right {
+    right: 24px;
+}
+
+.login {
+    min-height: calc(100vh - 64px);
+}
+.login .box {
+    margin: 0 auto;
+}
+.profile-user-png  .img-user {
+    padding: 4px;
+    border: 2px solid white;
+    border-radius: 30px;
+    height:65px;
+    width:65px;
+}
+
+.overflow-profile {
+    position: relative;
+    overflow: hidden;
+}
+
+.font-navigation {
+    font-weight: 500;
+}
+
+.user-info{
+    padding: 20px 5px 5px 20px;
+    line-height: 1;
+    position: absolute;
+    left: 55px;
+}
+
+.user-info>a{
+    text-decoration: none;
+    padding-right: 5px;
+    margin-top: 3px;
+    font-size: 11px;
+}
+.bg-bold{
+    background: #0426503d
+}
+
+@media only screen and (max-width: 600px) {
+    .login .box {
+        max-width: none;
+        width: 80%!important;
+    }
+  }
