@@ -13,11 +13,14 @@ const ModalMedium = ({ isOpen, onClose, title, content, ButtonFooter, position, 
             <ModalBody>
                 {content}
             </ModalBody>
-            <ModalFooter>
-                <Segment flex={1} justifyContent={'flex-end'}>
-                    {ButtonFooter}
-                </Segment>
-            </ModalFooter>
+            {
+                ButtonFooter &&
+                <ModalFooter>
+                    <Segment flex={1} justifyContent={'flex-end'}>
+                        {ButtonFooter}
+                    </Segment>
+                </ModalFooter>
+            }
         </ModalLite>
     );
 }

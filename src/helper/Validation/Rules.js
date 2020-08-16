@@ -9,11 +9,12 @@ const patternLetter = /^[a-zA-Z]+$/;
 const patternLetterSp = /^[a-zA-Z ]+$/;
 const patternNpwp = /^(\d{2})\.(\d{3})\.(\d{3})\.(\d{1})-(\d{3})\.(\d{3})$/i;
 const patternPassword = /^(?=[^\s]*?[0-9])(?=[^\s]*?[a-zA-Z])[a-zA-Z0-9]*$/;
+const patternNumberWithColon = /^[0-9,]+$/;
 
 export default class validationList {
     required = (input) => {
         let error = false;
-        if(input.value.trim().length === 0) {
+        if(input.value.length === 0) {
             error = true;
         }
         return error;
@@ -129,6 +130,14 @@ export default class validationList {
     numberSp = (input) => {
         let error = false;
         if(!patternNumberSp.test(input.value) && input.value) {
+            error = true;
+        }
+        return error;
+    }
+
+    numberColon = (input) => {
+        let error = false;
+        if(!patternNumberWithColon.test(input.value) && input.value) {
             error = true;
         }
         return error;

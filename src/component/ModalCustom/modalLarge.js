@@ -6,18 +6,21 @@ import PropTypes from 'prop-types';
 const ModalLarge = ({ isOpen, onClose, title, content, ButtonFooter, position, target }) => {
     const top = position === "top" ? { position: "absolute", top: 30, width: '800px', padding: '24px' } : { width: '800px', padding: '24px' }
     return (
-        <ModalLite isOpen={isOpen} toggle={() => onClose(target)} backdrop={true} style={top}>
+        <ModalLite isOpen={isOpen} toggle={() => onClose(target)} backdrop={true} style={top} mt={-17}>
             <ModalHeader>
                 <ModalTitle>{title}</ModalTitle>
             </ModalHeader>
             <ModalBody>
                 {content}
             </ModalBody>
-            <ModalFooter>
-                <Segment flex={1} justifyContent={'flex-end'}>
-                    {ButtonFooter}
-                </Segment>
-            </ModalFooter>
+            {
+                ButtonFooter &&
+                <ModalFooter>
+                    <Segment flex={1} justifyContent={'flex-end'}>
+                        {ButtonFooter}
+                    </Segment>
+                </ModalFooter>
+            }
         </ModalLite>
     );
 }

@@ -13,11 +13,14 @@ const ModalSmall = ({ isOpen, onClose, title, content, ButtonFooter, position, t
             <ModalBody>
                 {content}
             </ModalBody>
-            <ModalFooter>
-                <Segment flex={1} justifyContent={'flex-end'}>
-                    {ButtonFooter}
-                </Segment>
-            </ModalFooter>
+            {
+                ButtonFooter &&
+                <ModalFooter>
+                    <Segment flex={1} justifyContent={'flex-end'}>
+                        {ButtonFooter}
+                    </Segment>
+                </ModalFooter>
+            }
         </ModalLite>
     );
 }

@@ -15,6 +15,7 @@ const message = (rule) => {
         'decimal': ['Only decimal (3 digits behind the comma)'],
         'number': ['Only numbers'],
         'numberSp': ['Only numbers and spaces allowed'],
+        'numberColon': ['Only numbers and colon allowed'],
         'letter': ['Only letters'],
         'letterSp': ['Only letters and spaces allowed'],
         'npwp': ['Incorrect npwp format'],

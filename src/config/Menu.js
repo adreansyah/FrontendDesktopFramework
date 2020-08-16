@@ -63,7 +63,7 @@ const isMenus = [
         key: "graphql",
         icon: "point",
         label: "GRAPHQL",
-        link: '/',
+        link: '/graphQl',
         children: []
     }
 ];

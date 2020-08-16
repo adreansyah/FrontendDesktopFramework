@@ -16,6 +16,7 @@ const SamplePageTest2 = React.lazy(() => import('page/sample-page/Test/Two'))
 const SampleRedux = React.lazy(() => import('page/sample-redux'))
 const SampleReduxDetail = React.lazy(() => import('page/sample-redux/Detail'))
 const SampleCrud = React.lazy(() => import('page/sample-crud'))
+const Graphql = React.lazy(() => import('page/graphql'));
 
 const publicRoute = [
   { exact: true, path: '/login', name: 'Login', component: Login },
@@ -33,6 +34,7 @@ const privateRoute = [
   { exact: true, path: '/sample-page/test-2', name: 'Page Test 2', component: SamplePageTest2 },
   { exact: true, path: '/sample-redux', name: 'Sample Redux', component: SampleRedux },
   { exact: true, path: '/sample-redux/detail/:id', name: 'Sample Redux Detail', component: SampleReduxDetail },
+  { exact: true, path: '/graphQl', name: 'Sample GraphQL', component: Graphql },
   { exact: true, path: '*', name: 'Page Not Found', component: Error404 },
 ]
 

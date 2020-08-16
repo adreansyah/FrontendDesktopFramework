@@ -171,7 +171,7 @@ const showErrorMessage = (targetForm, obj, scroll = false) => {
             const errorObj = document.getElementById(errorId);
             const dom = findObj(targetForm, data.key);
             let currentElement = dom.closest('div.input-control') ? dom.closest('div.input-control') : '';
-            let currentElementDiv = dom.closest('div.input-control div') ? dom.closest('div.input-control div') : '';
+            let currentElementDiv = dom.closest('div.input-control > div') ? dom.closest('div.input-control > div') : '';
 
             if (data && data.error.length > 0) {
                 //set autoscroll

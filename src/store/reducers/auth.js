@@ -1,4 +1,4 @@
-import { setToken } from "helper";
+import { refreshToken } from "helper";
 
 const initialState = {
     id_token: "",
@@ -13,7 +13,7 @@ export const authentication = (state = initialState, action) => {
                 loading: true
             }
         case 'AUTH_SUCCESS':
-            setToken(action.payload.token);
+            refreshToken(action.payload.token);
             return {
                 ...state,
                 loading: false

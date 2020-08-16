@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { isLoggedIn } from './Auth';
-import Error404 from '../page/error/Error404';
+import ErrorLayout from '../page/errorLayout';
 
 export const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={props => (
@@ -47,7 +47,7 @@ export class DynamicRoute extends Component {
                 const Layout = require('./../page' + pathname + 'index.js').default;
                 return (<Layout {...this.props} />);
             } catch (e) {
-                return (<Error404 {...this.props} />);
+                return (<ErrorLayout {...this.props} />);
             }
         }
     }

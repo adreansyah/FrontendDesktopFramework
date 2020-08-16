@@ -15,6 +15,7 @@ const message = (rule) => {
         'decimal': ['Haya boleh desimal (3 digit dibelakang koma)'],
         'number': ['Hanya boleh angka'],
         'numberSp': ['Hanya boleh angka dan spasi'],
+        'numberColon': ['Hanya boleh angka dan koma'],
         'letter': ['Hanya boleh huruf'],
         'letterSp': ['Hanya boleh huruf dan spasi'],
         'npwp': ['Format npwp salah'],

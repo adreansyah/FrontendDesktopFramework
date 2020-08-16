@@ -16,12 +16,14 @@
     "url": "git@github.com:elevenia/frontend-desktop-base.git"
   },
   "dependencies": {
-    "@elevenia/master-ui": "^2.5.0",
+    "@apollo/client": "^3.1.3",
+    "@elevenia/master-ui": "^2.5.6",
     "@testing-library/react-hooks": "^3.2.1",
     "axios": "^0.19.0",
     "env-cmd": "^10.0.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "graphql": "^15.3.0",
     "http-proxy-middleware": "^1.0.3",
     "js-cookie": "^2.2.1",
     "react": "^16.11.0",

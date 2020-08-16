@@ -1,7 +1,9 @@
 import axios from 'axios';
-import { getToken, 
-    // logout 
+import {
+    getToken,
+    logout
 } from 'helper'
+import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const Axios = (url = null) => {
     const TOKEN = getToken()
@@ -30,7 +32,7 @@ const Axios = (url = null) => {
         } else {
             code = status = message = error.message;
         }
-        // code === 401 && logout()
+        code === 401 && logout()
         let errorData = {
             code,
             status,
@@ -64,3 +66,11 @@ export const Services = (url) => ({
         return Axios(url).delete(endpointName, data);
     }
 })
+
+export const GraphMiddleWare = () => {
+    const client = new ApolloClient({
+        uri: 'https://api.graph.cool/simple/v1/ciyz901en4j590185wkmexyex',
+        cache: new InMemoryCache()
+    })
+    return client
+}
